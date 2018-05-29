@@ -37,6 +37,15 @@ var groceries = ["apples", "milk", "eggs", "bread"];
 //Write a function called doubleCheck that takes in an array
 //as a parameter.
 
+function doubleCheck (arr12){
+  if (arr12.includes ("chocolate")){
+    return arr12;
+  } else {
+    arr12.push ("chocolate");
+    return arr12;
+  }
+}
+
 //If the array does not contain "chocolate", add "chocolate".
 //doubleCheck should return the array.
 
@@ -80,12 +89,15 @@ var ruff = dog.bark();
 //to the mySum variable total.
 
 //Return mySum.
-var mySum = 0;
-function looper (array1){
-  for (var i=0;i<array1.length; i++){
-    if (array1[i] %2 ==1){return mySum+=array1[i];}
-    else if (array1[i]>=100){return mySum+=array1[i];}
-  } 
+
+function looper (arr){
+  var mySum = 0;
+ for (var i=0;i<arr.length; i++){
+   if(arr[i] % 2 === 1 || arr[i] >= 100){
+     mySum += arr[i]
+   }
+ } 
+ return mySum;
 };
 
 //////////////////PROBLEM 7////////////////////
